@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="AAQ3">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Rheane Ezrah F. Manocsoc-Sodium">
+        <title>Sign-up</title>
+    </head>
+    <body>
+        <section class="home">
+            <div class="content">
+                <h2>Conservation Genetics</h2>
+                <p> Discover the world of Conservation Genetics and learn how you can perserve the vast and beautiful animal kingdom </p>
+            </div>
+          <div class="container">
+            <h1>Sign up</h1>
+            <!-- Form action set to nextpage.html -->
+            <form id="signupForm" action="mainpage.html" onsubmit="return validateForm();">
+
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" onblur="validateInput(this)" onfocus="resetValidation(this)"><br>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" onblur="validateInput(this)" onfocus="resetValidation(this)"><br>
+
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="password" id="confirm_password" onblur="validateInput(this)" onfocus="resetValidation(this)"><br>
+                <br>
+                <br>
+                    <button type="submit">Sign in</button>
+            </form>
+        </div>
+        </section>
+        <!-- script -->
+    <script>
+            // Function to validate input
+            function validateInput(input) 
+                {
+                    if (input.value.trim() === "") 
+                        {
+                            input.classList.add("invalid");
+                        } 
+                    else  
+                        {
+                            input.classList.remove("invalid");
+                            input.classList.add("valid");
+                        }
+                }
+
+            // Function to reset validation
+            function resetValidation(input) 
+                {
+                    input.classList.remove("invalid");
+                    input.classList.remove("valid");
+                }
+
+            // Function to validate form
+            function validateForm() 
+                {
+                    var password = document.getElementById("password").value.trim();
+                    var confirmPassword = document.getElementById("confirm_password").value.trim();
+
+                    if (password !== confirmPassword) 
+                        {
+                            alert("Passwords do not match.");
+                            document.getElementById("password").classList.add("invalid");
+                            document.getElementById("confirm_password").classList.add("invalid");
+                            return false;
+                        }
+
+                    var inputs = document.querySelectorAll("#signupForm input");
+                    var valid = true;
+                    inputs.forEach(function(input) 
+                        {
+                            if (input.value.trim() === "") 
+                                {
+                                    input.classList.add("invalid");
+                                    valid = false;
+                                } 
+                            else 
+                                {
+                                input.classList.remove("invalid");
+                                }
+                        });
+
+                    if (!valid) 
+                        {
+                            alert("Please fill out all fields.");
+                            return false;
+                        }
+
+                    // Store email in local storage
+                    localStorage.setItem("email", document.getElementById("email").value.trim());
+
+                    alert("Form submitted successfully!");
+                    return true;
+                }
+
+            // Pre-fill email field if it exists in local storage
+            window.onload = function() 
+                {
+                    var email = localStorage.getItem("email");
+                    if (email) 
+                        {
+                            document.getElementById("email").value = email;
+                        }
+                }       
+    </script>
+
+    </body>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Rockwell;
+        }
+
+        html, body 
+            {
+                height: 100%;
+                width: 100%;
+            }
+
+        .home 
+            {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                background: url('Bear.webp') no-repeat center center fixed;
+                background-size: cover;
+                display: flex;
+                align-items: center;
+                padding: 80px 100px;
+                justify-content: space-between;
+            }
+
+        .home .content 
+            {
+                max-width: 500px;
+                color: white;
+                font-family: Rockwell;
+            }
+
+        .home .container 
+            {
+                width: 440px;
+            }
+
+        .home h1 
+            {
+                color: white;
+                text-align: center;
+                font-size: 30px;
+                padding-bottom: 10%;
+            }
+
+        .home h2 
+            {
+                color: white;
+                text-align: left;
+                font-size: 60px;
+                padding-bottom: 10%;
+            }
+
+        .home p 
+            {
+                color: white;
+                text-align: left;
+            }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+
+        textarea 
+            {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 10px;
+                border: 1px solid white;
+                border-radius: 4px;
+                box-sizing: border-box;
+                background-color: transparent;
+                color: white;
+            }
+
+        textarea 
+            {
+                height: 100px;
+            }
+
+        input[type="text"].invalid,
+        select.invalid,
+        input[type="password"].invalid 
+            {
+                border: 2px solid red;
+            }
+
+        input[type="text"].valid,
+        select.valid,
+        input[type="password"].valid 
+            {
+                border: 2px solid #1F627A;
+            }
+
+        button 
+            {
+                width: 100%;
+                height: 50px;
+                border: none;
+                outline: none;
+                border-radius: 40px;
+            }
+
+        button:hover 
+            {
+                background-color: #1F627A;
+                transition: 0.3s;
+            }
+
+        label 
+            {
+                color: white;
+            }
+    </style>
+</html>  
+
+  

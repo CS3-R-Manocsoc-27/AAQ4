@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <meta charset="UTF-8">
+        <meta name="description" content="AAQ3">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Rheane Ezrah F. Manocsoc-Sodium">
+        <title>Conservation Genetics</title>
+    </head>
+    <body>
+        <!-- nav bar -->
+        <header class="header">
+            <nav class="nav">
+                <a href="mainpage.html">Home</a>
+                <a href="CTC.html">Contributors to extinction</a>
+                <a href="BIRD.html">Color your bird!</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+        <!-- nav bar -->
+
+        <!-- information -->
+        <div class="textContainer">
+        <img src="cat.jpeg" class="PH1">
+        <div class="card" style="--clr: blue;">
+            <div class="imgBx">Conservation Genetics</div>
+            <div class="content">Conservation genetics is a mixture of ecology, molecular biology, population genetics, mathematical modeling and evolutionary systematics (the construction of family relationships). It is both a basic and an applied science. Scientists must first understand the genetic relationships of the organisms under study. Once this basic science is understood by scientists, management techniques must then be applied by wildlife managers to preserve biological diversity in these species. <br> <br> The organisms under investigation are usually endangered or threatened populations. To develop a management strategy, scientists ask: what has brought these populations to the brink of extinction, and what steps can be taken to reverse this trend? Information about the genetic diversity of the animals under study helps scientists and managers in forming strategies to preserve and protect the diversity of plants and animals worldwide. <br> <br> Source: https://web.archive.org /web/ 20060901223155 /http:// learn.genetics.utah.edu /units/basics/ conservation/ whatisit.cfm</div>
+        </div>
+        <div class="card" style="--clr: red;">
+            <div class="imgBx">Genetic diversity</div>
+            <div class="content">Genetic diversity is the total amount of genetic variability within a species. It can be measured in several ways, including: observed heterozygosity, expected heterozygosity, the mean number of alleles per locus, the percentage of loci that are polymorphic, and estimated effective population size. Genetic diversity on the population level is a crucial focus for conservation genetics as it influences both the health of individuals and the long-term survival of populations: decreased genetic diversity has been associated with reduced average fitness of individuals, such as high juvenile mortality, reduced immunity,diminished population growth,and ultimately, higher extinction risk. <br> <br> The organisms under investigation are usually endangered or threatened populations. To develop a management strategy, scientists ask: what has brought these populations to the brink of extinction, and what steps can be taken to reverse this trend? Information about the genetic diversity of the animals under study helps scientists and managers in forming strategies to preserve and protect the diversity of plants and animals worldwide. <br> <br> Source: wiki</div>
+        </div>
+        </div>
+        <!-- information -->
+
+    </body>
+    
+    <style>
+      *{
+            margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          background-color: #296779;
+        }
+
+        body
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+
+        .header 
+            {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 20px 100px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 99;
+                background-color: forestgreen;
+            }
+
+        nav a 
+            {
+                font-family: Rockwell, serif;
+                color: white;
+                font-size: 20px;
+                text-decoration: none;
+                float: left;
+                z-index: 3;
+                background-color: forestgreen;
+                padding: 0 15px; 
+            }
+
+        nav a:first-child 
+            {
+                border-left: none;
+            }
+
+        nav a:hover
+            {
+                color: darkgreen;
+                transition: 0.3s;
+            }
+
+         .PH1 
+            {
+                display: block;
+                margin: 25px auto;
+                height: 100%;
+                width: 100%;
+                padding: 0;
+            }
+        .textContainer
+            {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 100px 50px;
+                padding: 100px 50px;
+            }
+
+        .textContainer .card
+            {
+                position: relative;
+                width: 550px;
+                height: 680px;
+                background: white;
+                border-radius: 20px;
+                box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+                transition: 0.5s;
+            }
+
+        .textContainer .card:hover
+            {
+                height: 690px;
+            }
+
+        .textContainer .card .imgBx
+            {
+                position: absolute;
+                top: 20px;
+                margin-right: 20px;
+                width: 550px;
+                height: 590px;
+                background: white;
+                border-radius: 12px;
+                transition: 0.4s;
+                z-index: 2;
+                font-family: impact;
+                text-align: center;
+                padding-top: 50%;
+                font-size: 40px;
+            }
+
+        .textContainer .card:hover .imgBx
+            {
+                background-color: transparent;
+                padding-top: 0;
+                scale: 0.75;
+            }
+
+        .textContainer .card .content
+            {
+                position: absolute;
+                width: 100p%;
+                padding: 150px 30px;
+                text-align: center;
+                background-color: transparent;
+                font-family: Rockwell;
+            }
+
+    </style>
+</html>  
+
+
+
+
+

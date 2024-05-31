@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="AAQ3">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Rheane Ezrah F. Manocsoc-Sodium">
+        <title>✨Color your own bird!✨</title>
+    </head>
+        <link href="BIRD.css" rel="stylesheet" type="text/css">
+    <body>
+        <!-- nav bar -->
+        <header class="header">
+            <nav class="nav">
+                <a href="mainpage.html">Home</a>
+                <a href="CTC.html">Contributors to extinction</a>
+                <a href="BIRD.html">Color your bird!</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+        <!-- nav bar -->
+
+        <div class="imgContainer">
+        <img src="cat.jpeg" class="PH1">
+        </div>
+
+
+        <div class="textContainer1">
+            <h1>FUN FACT!</h1>
+
+            <p>
+                A new study from Yale University has revealed that, when it comes to colors that are visible to birds, hummingbirds have a plumage diversity that exceeds the known colors of all other bird species combined. The experts report that their discovery increases the total of known bird-visible plumage colors by 56 percent.
+            </p>
+            <br>
+            <p>
+                Lets color your own bird! all you need to do is select only one of the options choose the color fof the main body, tail, Base of the Wing, and the Feathers of Wings. HAVE FUN!
+            </p>
+        <br> 
+        </div>
+
+        <!-- form -->
+        <div class="textContainer2">
+        <form>
+            <label for="radio">Body colors:</label><br>
+            <input type="radio" id="BC1" name="bodyColor" value="BCGreen">
+            <label for="BC1">Green</label><br>
+            <input type="radio" id="BC2" name="bodyColor" value="BCRed">
+            <label for="BC2">Red</label><br>
+            <input type="radio" id="BC3" name="bodyColor" value="BCBlue">
+            <label for="BC3">Blue</label><br>
+            <input type="radio" id="BC4" name="bodyColor" value="BCYellow">
+            <label for="BC4">Yellow</label><br>
+            <input type="radio" id="BC5" name="bodyColor" value="BCPurple">
+            <label for="BC5">Purple</label><br>
+            <input type="radio" id="BC6" name="bodyColor" value="BCBlack">
+            <label for="BC6">Black</label><br>
+            <input type="radio" id="BC7" name="bodyColor" value="BCWhite">
+            <label for="BC7">White</label><br><br>
+
+            <label for="checkbox">Tail color (only pick one):</label><br>
+            <input type="checkbox" id="TC1" name="tailColor" value="TCGreen">
+            <label for="TC1">Green</label><br>
+            <input type="checkbox" id="TC2" name="tailColor" value="TCRed">
+            <label for="TC2">Red</label><br>
+            <input type="checkbox" id="TC3" name="tailColor" value="TCBlue">
+            <label for="TC3">Blue</label><br>
+            <input type="checkbox" id="TC4" name="tailColor" value="TCYellow">
+            <label for="TC4">Yellow</label><br>
+            <input type="checkbox" id="TC5" name="tailColor" value="TCPurple">
+            <label for="TC5">Purple</label><br>
+            <input type="checkbox" id="TC6" name="tailColor" value="TCBlack">
+            <label for="TC6">Black</label><br>
+            <input type="checkbox" id="TC7" name="tailColor" value="TCWhite">
+            <label for="TC7">White</label><br><br>
+
+            <label for="checkbox">Base Wing Color (only pick one):</label><br>
+            <input type="checkbox" id="BW1" name="basewingColor" value="BWGreen">
+            <label for="BW1">Green</label><br>
+            <input type="checkbox" id="BW2" name="basewingColor" value="BWRed">
+            <label for="BW2">Red</label><br>
+            <input type="checkbox" id="BW3" name="basewingColor" value="BWBlue">
+            <label for="BW3">Blue</label><br>
+            <input type="checkbox" id="BW4" name="basewingColor" value="BWYellow">
+            <label for="BW4">Yellow</label><br>
+            <input type="checkbox" id="BW5" name="basewingColor" value="BWPurple">
+            <label for="BW5">Purple</label><br>
+            <input type="checkbox" id="BW6" name="basewingColor" value="BWBlack">
+            <label for="BW6">Black</label><br>
+            <input type="checkbox" id="BW7" name="basewingColor" value="BWWhite">
+            <label for="BW7">White</label><br><br>
+
+            <label for="checkbox">Feathers of Wings Color (only pick one):</label><br>
+            <input type="checkbox" id="MW1" name="FwingColor" value="MWGreen">
+            <label for="MW1">Green</label><br>
+            <input type="checkbox" id="MW2" name="FwingColor" value="MWRed">
+            <label for="MW2">Red</label><br>
+            <input type="checkbox" id="MW3" name="FwingColor" value="MWBlue">
+            <label for="MW3">Blue</label><br>
+            <input type="checkbox" id="MW4" name="FwingColor" value="MWYellow">
+            <label for="MW4">Yellow</label><br>
+            <input type="checkbox" id="MW5" name="FwingColor" value="MWPurple">
+            <label for="MW5">Purple</label><br>
+            <input type="checkbox" id="MW6" name="FwingColor" value="MWBlack">
+            <label for="MW6">Black</label><br>
+            <input type="checkbox" id="MW7" name="FwingColor" value="MWWhite">
+            <label for="MW7">White</label><br><br>
+        </form>
+        </div>
+        <!-- form -->
+
+        <!-- default img -->
+        <center>
+        <h3> YOUR BIRD </h3>
+    
+        <div id="container">
+            <img id="bodyImage" src="BCWhite.png" alt="Default Body Image">
+            <img id="tailImage" src="TCWhite.png" alt="Tail Overlay">
+            <img id="basewingImage" src="BWWhite.png" alt="Base Wing Overlay">
+            <img id="fwingImage" src="MWWhite.png" alt="Feathers of Wings Overlay">
+        </div>
+        </center>
+        <!-- default img -->
+
+    <!-- script -->
+    <script>
+        const bodyRadios = document.querySelectorAll('input[name="bodyColor"]');
+        const tailCheckboxes = document.querySelectorAll('input[name="tailColor"]');
+        const basewingCheckboxes = document.querySelectorAll('input[name="basewingColor"]');
+        const fwingCheckboxes = document.querySelectorAll('input[name="FwingColor"]');
+        const bodyImage = document.getElementById('bodyImage');
+        const tailImage = document.getElementById('tailImage');
+        const basewingImage = document.getElementById('basewingImage');
+        const fwingImage = document.getElementById('fwingImage');
+
+        // Function to update body image based on selected radio button
+        bodyRadios.forEach(radio => 
+            {
+                radio.addEventListener('click', () => 
+                    {
+                        bodyImage.src = radio.value + ".png";
+                    });
+            });
+
+        // Function to update tail image based on selected checkboxes
+        tailCheckboxes.forEach(checkbox => 
+            {
+                checkbox.addEventListener('click', () => 
+                    {
+                        const selectedTails = Array.from(tailCheckboxes)
+                                          .filter(checkbox => checkbox.checked)
+                                          .map(checkbox => checkbox.value);
+
+                        // If there are any selected tails, show the first one as an example
+                        if (selectedTails.length > 0) 
+                            {
+                                tailImage.src = selectedTails[0] + ".png"; 
+                            } 
+                        else 
+                            {
+                                tailImage.src = "";
+                            }
+                    });
+            });
+
+        // Function to update base wing image based on selected checkboxes
+        basewingCheckboxes.forEach(checkbox => 
+            {
+                checkbox.addEventListener('click', () => 
+                    {
+                        const selectedBasewings = Array.from(basewingCheckboxes)
+                                          .filter(checkbox => checkbox.checked)
+                                          .map(checkbox => checkbox.value);
+
+                    // If there are any selected base wings, show the first one as an example
+                    if (selectedBasewings.length > 0) 
+                        {
+                            basewingImage.src = selectedBasewings[0] + ".png";  
+                        } 
+                    else 
+                        {
+                            basewingImage.src = "";
+                        }
+                    });
+            });
+
+        // Function to update feathers of wings image based on selected checkboxes
+        fwingCheckboxes.forEach(checkbox => 
+            {
+                checkbox.addEventListener('click', () => 
+                    {
+                        const selectedFwings = Array.from(fwingCheckboxes)
+                                          .filter(checkbox => checkbox.checked)
+                                          .map(checkbox => checkbox.value);
+
+                        // If there are any selected feathers of wings, show the first one as an example
+                        if (selectedFwings.length > 0) 
+                            {
+                                fwingImage.src = selectedFwings[0] + ".png";  
+                            } 
+                        else 
+                            {
+                                fwingImage.src = "";
+                            }
+                    });
+            });
+    </script>
+    <!-- script -->
+    </body>
+</html>
